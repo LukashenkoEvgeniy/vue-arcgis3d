@@ -1,4 +1,4 @@
-# leaflet-vue-project
+# ArcGIS-vue-project
 
 > project for showing objects into mapview
 
