@@ -1,6 +1,10 @@
 <template lang="pug">
   transition(name="slide")
     aside(v-show="componentVisibility")
+      ul(id="maps-list" class="list-group")
+        li(class="list-group-item" v-for="item in mapList" v-bind:key="item")
+          p {{item}}
+
 </template>
 
 <script>
@@ -8,6 +12,18 @@
 
   export default {
     name: "SideBar",
+
+    data() {
+        return{
+            mapList: [
+              'hybrid',
+              'topo',
+              'satellite',
+              'streets-navigation-vector',
+              'streets-night-vector'
+            ]
+        }
+    },
 
     computed: {
       componentVisibility () {

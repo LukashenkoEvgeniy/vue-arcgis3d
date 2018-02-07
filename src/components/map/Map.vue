@@ -5,6 +5,7 @@
 
 <script>
   import * as esriLoader from 'esri-loader'
+  import ms from 'milsymbol'
 
   export default {
 
@@ -36,6 +37,13 @@
               scale: 50000000,
               center: [-101.17, 21.78]
             });
+            /**
+             * hybrid
+             * topo
+             * satellite
+             */
+            map.basemap = 'satellite'
+
 
           })
           .catch(err => {
